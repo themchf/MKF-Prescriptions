@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MKF Prescriptions</title>
+  <title>MKF Prescription</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Top Bar -->
-  <header class="top-bar">
-    <span>MKF Prescriptions</span>
-  </header>
+  <div class="container">
+    <header>
+      <h1>MKF Prescriptions</h1>
+      <p class="muted">Type Your Symptoms</p>
+    </header>
 
-  <!-- Main App -->
-  <main class="app-container">
-    <textarea id="symptomInput" placeholder="Describe your symptoms..."></textarea>
-    <div id="result" class="result-box"></div>
-  </main>
+    <div class="card">
+      <textarea id="symptomInput" placeholder="Describe your symptoms..."></textarea>
+      <button onclick="analyzeSymptoms()">Analyze</button>
+    </div>
 
-  <!-- Floating Analyze Button -->
-  <button class="fab" onclick="analyzeSymptoms()">Analyze</button>
+    <div id="result"></div>
+
+    <p class="disclaimer">⚠️ This tool is for guidance only. Consult a doctor for any serious conditions.</p>
+  </div>
 
   <script src="script.js"></script>
 </body>
