@@ -102,7 +102,6 @@ const conditions = [
       dosage: "Take 1 capsule once daily before food.",
       warning: "Avoid long-term use without doctor’s advice."
     }
-  ];
 ];
 
 function analyze() {
@@ -127,4 +126,5 @@ function analyze() {
 
   document.getElementById("output").innerHTML = result;
 }
+
 
