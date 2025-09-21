@@ -355,15 +355,6 @@ const conditions = [
     warning: "Requires follow-up for anticoagulation therapy."
   },
   {
-    keywords: ["bloody cough", "smoker", "weight loss"],
-    diagnosis: "Lung Cancer",
-    medicine: "Oncology referral",
-    dosage: "-",
-    frequency: "-",
-    duration: "-",
-    warning: "Requires biopsy and oncologist management."
-  },
-  {
     keywords: ["confusion", "memory loss", "elderly"],
     diagnosis: "Alzheimer’s Disease",
     medicine: "Donepezil",
@@ -396,6 +387,7 @@ function analyze() {
 
   document.getElementById("output").innerHTML = result;
 }
+
 
 
 
