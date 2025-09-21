@@ -52,7 +52,57 @@ const conditions = [
     frequency: "-",
     duration: "-",
     warning: "Life-threatening. Call emergency services now."
-  }
+   },
+   {
+      keywords: ["fever", "cough", "sputum", "yellow"],
+      condition: "Bacterial Chest Infection",
+      medicine: "Amoxicillin 500 mg",
+      dosage: "Take 1 capsule three times daily for 7 days.",
+      warning: "Avoid if allergic to penicillin. Seek help if worsening."
+    },
+    {
+      keywords: ["runny nose", "sneezing", "sore throat", "cold"],
+      condition: "Common Cold",
+      medicine: "Paracetamol 500 mg",
+      dosage: "Take 1–2 tablets every 6–8 hours as needed.",
+      warning: "Do not exceed 4g per day."
+    },
+    {
+      keywords: ["headache", "sensitivity to light", "migraine"],
+      condition: "Migraine",
+      medicine: "Ibuprofen 400 mg",
+      dosage: "Take 1 tablet every 8 hours with food.",
+      warning: "Avoid if you have stomach ulcers or kidney issues."
+    },
+    {
+      keywords: ["stomach pain", "diarrhea", "vomiting", "food"],
+      condition: "Food Poisoning",
+      medicine: "ORS (Oral Rehydration Solution)",
+      dosage: "Sip frequently until hydrated.",
+      warning: "Seek help if severe dehydration or blood in stool."
+    },
+    {
+      keywords: ["burning urine", "painful urination", "urinary"],
+      condition: "Urinary Tract Infection (UTI)",
+      medicine: "Nitrofurantoin 100 mg",
+      dosage: "Take 1 capsule twice daily for 5 days.",
+      warning: "Consult doctor if symptoms persist >3 days."
+    },
+    {
+      keywords: ["allergy", "rash", "itching", "sneezing"],
+      condition: "Allergic Reaction",
+      medicine: "Cetirizine 10 mg",
+      dosage: "Take 1 tablet once daily.",
+      warning: "Seek help if swelling of lips or difficulty breathing."
+    },
+    {
+      keywords: ["heartburn", "acid", "reflux", "indigestion"],
+      condition: "Acid Reflux (GERD)",
+      medicine: "Omeprazole 20 mg",
+      dosage: "Take 1 capsule once daily before food.",
+      warning: "Avoid long-term use without doctor’s advice."
+    }
+  ];
 ];
 
 function analyze() {
@@ -77,3 +127,4 @@ function analyze() {
 
   document.getElementById("output").innerHTML = result;
 }
+
