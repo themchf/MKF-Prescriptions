@@ -1,4 +1,4 @@
-/* General reset */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,91 +7,101 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #6dd5fa, #ffffff);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #eee;
 }
 
 .container {
-  background: #ffffff;
+  background: rgba(20, 20, 30, 0.95);
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  width: 480px;
-  max-width: 90%;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 123, 255, 0.3);
+  width: 500px;
+  max-width: 95%;
   text-align: center;
   animation: fadeIn 0.7s ease;
 }
 
 h1 {
-  margin-bottom: 10px;
-  color: #007bff;
-  font-size: 26px;
+  margin-bottom: 12px;
+  color: #4da6ff;
+  font-size: 28px;
+  text-shadow: 0 0 8px rgba(77,166,255,0.6);
 }
 
 .subtitle {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-size: 14px;
-  color: #555;
+  color: #aaa;
 }
 
 input {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 1px solid #333;
+  border-radius: 8px;
   font-size: 16px;
   outline: none;
+  background: #1c1c28;
+  color: #eee;
   transition: 0.3s;
 }
 
 input:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 6px rgba(0,123,255,0.3);
+  border-color: #4da6ff;
+  box-shadow: 0 0 8px rgba(77,166,255,0.6);
 }
 
 button {
-  background: #007bff;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
   color: white;
-  padding: 12px 20px;
+  padding: 12px 22px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,123,255,0.6);
 }
 
 button:hover {
-  background: #0056b3;
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #0056b3, #008fb3);
+  box-shadow: 0 0 15px rgba(0,123,255,0.9);
 }
 
 .result {
   margin-top: 25px;
   text-align: left;
-  padding: 18px;
-  background: #f9f9f9;
-  border-left: 5px solid #007bff;
-  border-radius: 6px;
+  padding: 20px;
+  background: #1c1c28;
+  border-left: 5px solid #4da6ff;
+  border-radius: 8px;
   animation: slideUp 0.5s ease;
+  box-shadow: 0 0 12px rgba(0,123,255,0.2);
 }
 
 .result h3 {
   margin: 0 0 12px;
-  color: #007bff;
+  color: #4da6ff;
+  text-shadow: 0 0 6px rgba(77,166,255,0.6);
 }
 
 .warning {
-  color: #d9534f;
+  color: #ff5c5c;
   font-weight: bold;
+  text-shadow: 0 0 6px rgba(255,92,92,0.6);
 }
 
 .disclaimer {
-  margin-top: 20px;
+  margin-top: 18px;
   font-size: 12px;
-  color: #666;
+  color: #777;
 }
 
 @keyframes fadeIn {
