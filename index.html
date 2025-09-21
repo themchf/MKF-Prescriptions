@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MKF Prescription</title>
+  <title>MKF Prescriptions</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <header>
       <h1>MKF Prescriptions</h1>
-      <p class="muted">Type Your Symptoms</p>
+      <p class="muted">Type your symptoms and recommended medicine</p>
     </header>
 
+    <!-- Input Card -->
     <div class="card">
-      <textarea id="symptomInput" placeholder="Describe your symptoms..."></textarea>
+      <textarea id="symptomInput" placeholder="ex. fever, headache, yellow sputum"></textarea>
       <button onclick="analyzeSymptoms()">Analyze</button>
     </div>
 
+    <!-- Results Container -->
     <div id="result"></div>
 
     <p class="disclaimer">⚠️ This tool is for guidance only. Consult a doctor for any serious conditions.</p>
