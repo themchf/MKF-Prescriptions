@@ -366,11 +366,17 @@ const conditions = [
 ];
 
 function analyze() {
-  const input = document.getElementById("symptoms").value.toLowerCase();
+  const input = document.getElementById("symptoms").value.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').trim();
+
   let result = "<p>No exact match found. Please consult a doctor.</p>";
 
   for (let cond of conditions) {
-    if (cond.keywords.every(k => input.includes(k))) {
+    const matches = cond.keywords.filter(k => {
+      const pattern = new RegExp(`\\b${k.toLowerCase()}\\b`);
+      return pattern.test(input);
+    });
+
+    if (matches.length === cond.keywords.length) {  // all keywords matched
       result = `
         <div class="result">
           <h3>Diagnosis: ${cond.diagnosis}</h3>
@@ -387,6 +393,8 @@ function analyze() {
 
   document.getElementById("output").innerHTML = result;
 }
+
+
 
 
 
